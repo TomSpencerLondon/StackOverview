@@ -1,13 +1,23 @@
 package com.codurance;
 
 public class Stack {
-  Object object;
+  Node head;
 
   public void push(Object object) {
-    this.object = object;
+    if (head == null){
+      head = new Node(object, null);
+    }else {
+      Node temp = head;
+      head = new Node(object, temp);
+    }
   }
 
   public Object pop() {
-    return object;
+    if (head == null) {
+      throw new StackEmptyException();
+    }
+      Object result = head.data();
+      head = head.next();
+      return result;
   }
 }
