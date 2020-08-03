@@ -1,7 +1,5 @@
 package com.codurance;
 
-import java.util.List;
-
 public class Stack {
   Object object;
 

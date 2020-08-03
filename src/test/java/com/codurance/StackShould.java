@@ -8,10 +8,14 @@ public class StackShould {
 
   @Test
   void push_into_empty_stack() {
+    // given
     Stack stack = new Stack();
     Object object = new Object();
+
+    // when
     stack.push(object);
 
+    // then
     assertThat(stack.pop()).isSameAs(object);
   }
 }
